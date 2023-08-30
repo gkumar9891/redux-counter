@@ -1,0 +1,20 @@
+import { combineReducers } from "redux";
+
+const count = 0;
+
+const changeTheNumber = (state = count, action) => {
+  switch (action.type) {
+    case "increment":
+      return state + action.payload;
+    case "decrement":
+      return state - action.payload;
+    default:
+      return state;
+  }
+};
+
+const rootReducer = combineReducers({
+  changeTheNumber
+});
+
+export default rootReducer;
